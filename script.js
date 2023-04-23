@@ -13,12 +13,17 @@ document.getElementById('color2').style.backgroundColor = 'red';
 document.getElementById('color3').style.backgroundColor = 'green';
 document.getElementById('color4').style.backgroundColor = 'blue';
 
-
-/*for(let color of paletteList) {
-    
+const changeColor = () => {
+for(let index = 1; index < paletteList.length; index +=1) {
+    const colors = document.getElementsByClassName('color');
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
 
-  color.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-}*/
+  colors[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+};
+
+const btnChangeColor = document.getElementById("button-random-color");
+
+btnChangeColor.addEventListener('click', changeColor);

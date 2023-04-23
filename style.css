@@ -11,9 +11,3 @@
     width: 30px;
 }
 
-#color-palette {
-    width: 300px;
-    height: 300px;
-    border: blue solid 1px;
-    display: inline-block;
-}
