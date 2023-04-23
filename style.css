@@ -5,5 +5,27 @@
 };
 
 .color {
-    
+    display: inline-block;
+    border: black solid 1px;   
+};
+
+#color1 {
+    background-color: black;
+    height: 30px;
+    width: 50px;
+}
+
+#color2 {
+    height: 30px;
+    width: 50px;
+}
+
+#color3 {
+    height: 30px;
+    width: 50px;
+}
+
+#color4 {
+    height: 30px;
+    width: 50px;
 }
