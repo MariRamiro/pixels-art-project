@@ -1,16 +1,24 @@
 const palette = document.getElementById("color-palette");
 
 const paletteHead = document.getElementsByClassName("color");
-for(let index = 0; index < paletteHead.length; index +=1){
-    const paletteTitle = [];
-    paletteTitle.push(paletteHead[index]);
+
+const paletteList = [];
+
+for(let index = 0; index < 4; index +=1){
+    paletteList.push(paletteHead[index]);
 };
 
-let btns = document.querySelectorAll('button')
-for(button of btns) {
-    let r = Math.floor(Math.random() * 255),
-        g = Math.floor(Math.random() * 255),
-        b = Math.floor(Math.random() * 255);
+document.getElementById('color1').style.backgroundColor = 'black';
+document.getElementById('color2').style.backgroundColor = 'red';
+document.getElementById('color3').style.backgroundColor = 'green';
+document.getElementById('color4').style.backgroundColor = 'blue';
 
-  button.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-}
+
+/*for(let color of paletteList) {
+    
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+
+  color.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}*/
