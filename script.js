@@ -47,3 +47,10 @@ for(let index =0; index < 25; index +=1){
     board.appendChild(pixel);
 }
 
+const btnChooseColor = paletteList[index];
+
+btnChooseColor.addEventListener('click', chooseColor);
+
+const chooseColor = () =>{
+    for (let index = 0; index < paletteList.length; index += 1) 
+}
