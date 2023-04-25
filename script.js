@@ -47,10 +47,44 @@ for(let index =0; index < 25; index +=1){
     board.appendChild(pixel);
 }
 
-const btnChooseColor = paletteList[index];
 
-btnChooseColor.addEventListener('click', chooseColor);
-
-const chooseColor = () =>{
-    for (let index = 0; index < paletteList.length; index += 1) 
+const choosedColor = () =>{
+    let color = document.querySelector('.selected').style.backgroundColor;
+    return color;
 }
+
+const mudeACor = (event) =>{
+    event.target.style.backgroundColor = choosedColor();
+}
+
+const setSelected = (event) => {
+    const caminho = event.target;
+    for(let index=0;index<paletteHead.length; index+=1){
+        if(paletteHead[index].classList.contains('selected')){
+        paletteHead[index].classList.remove('selected');
+        } 
+    }
+    caminho.classList.add('selected')
+}
+
+
+const beSelected = () => {
+    const selected = document.querySelectorAll('.color');
+        for(let index=0; index<selected.length; index+=1){
+            selected[index].addEventListener('click', setSelected)
+        }       
+}
+beSelected()
+
+const printColor = () => {
+    const pixelColor = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixelColor.length; index += 1){
+        pixelColor[index].addEventListener ('click', mudeACor)
+    }
+}
+printColor()
+
+
+
+
+
