@@ -83,6 +83,3 @@ const printColor = () => {
 printColor()
 
 const btnClear = document.getElementById('clear-board');
-
-const makeClear = () =>{
-}
