@@ -18,8 +18,8 @@ const changeColor = () => {
   for (let index = 1; index < paletteList.length; index += 1) {
     const colors = document.getElementsByClassName('color');
     const r = Math.floor(Math.random() * 255);
-    const let g = Math.floor(Math.random() * 255);
-    const let b = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
 
     colors[index].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     savedColor.push(`rgb(${r}, ${g}, ${b})`);
@@ -81,5 +81,3 @@ const printColor = () => {
   }
 }
 printColor()
-
-const btnClear = document.getElementById('clear-board');
